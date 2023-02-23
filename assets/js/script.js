@@ -1,3 +1,26 @@
+document.addEventListener("DOMContentLoaded", function()
+{
+    //add event listeners to buttons - 4 game buttons & 1 submit button
+    let buttons = document.getElementsByTagName("button");
+
+    for(let button of buttons)
+    {
+        button.addEventListener("click", function()
+        {
+            if(this.getAttribute("data-type") === "submit")
+            {
+                alert("You clicked Submit!");
+            }
+            else
+            {
+                let gameType = this.getAttribute("data-type");
+                alert(`You clicked ${gameType}`);
+            }
+           
+        })
+    }
+})
+
 function runGame()
 {
 
@@ -35,5 +58,5 @@ function displaySubtractQuestion()
 
 function displayMultiplyQuestion()
 {
-    
+
 }
